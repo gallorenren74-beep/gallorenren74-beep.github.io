@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do You Love Me? 🥹</title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#800080,#fff);
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+position:relative;
+width:350px;
+}
+
+img{
+width:180px;
+margin-bottom:20px;
+}
+
+h1{
+margin-bottom:20px;
+color:#800080;
+}
+
+button{
+padding:12px 28px;
+font-size:18px;
+border:none;
+border-radius:25px;
+cursor:pointer;
+transition:.2s;
+}
+
+#yes{
+background:#800080;
+color:white;
+margin-right:20px;
+}
+
+#no{
+background:#0000FF;
+position:absolute;
+}
+
+#success{
+display:none;
+animation:fade .8s;
+}
+
+.heart{
+position:fixed;
+font-size:25px;
+animation:fly 4s linear forwards;
+pointer-events:none;
+}
+
+@keyframes fly{
+from{
+transform:translateY(0);
+opacity:1;
+}
+to{
+transform:translateY(-110vh);
+opacity:0;
+}
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:scale(.8);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+</style>
+
+</head>
+<body>
+
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+<div id="question">
+
+<img src="https://c.tenor.com/sZPWbZj_QI8AAAAi/kakaotalk-emoticon.gif">
+<h1>Do You Love Me?🥹 </h1>
+
+<button id="yes">Yes 🥰 </button>
+
+<button id="no">No 😢</button>
+
+</div>
+
+<div id="success">
+
+<img src="Bear2.gif" width="200" alt="kissing bear">
+
+<h1>yeyy, I Knew It! 😍</h1>
+
+<p style="margin-top:12px;font-size:12px;">
+Hi lovee, just a simple message for youu, I hope you know love that I will always be your biggest supporter and will be there for you anytime. You can lean on m every time you feel tired. I will always be your safe space when you feel like the world is against and weighs you down, I will always stay even if you feel like everyone is leaving you. whatever happens just remember that im always here and i will always be here, cause no matter how cruel the world is, you'll always have me, we'll always find a way to conquer the challenges that life throws.You will always be the best thing that ever happened to me.
+I lovee youu soo muchhh pooo!!😚 
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+const no=document.getElementById("no");
+
+function move(){
+
+const w=window.innerWidth-120;
+const h=window.innerHeight-80;
+
+no.style.left=Math.random()*w+"px";
+no.style.top=Math.random()*h+"px";
+
+}
+
+no.addEventListener("mouseover",move);
+no.addEventListener("click",move);
+
+document.getElementById("yes").onclick=function(){
+
+document.getElementById("question").style.display="none";
+document.getElementById("success").style.display="block";
+
+const music = document.getElementById("music");
+music.currentTime = 80; // Starts at 1:20
+music.play();
+
+setInterval(()=>{
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML=["💙", "💜", "💙", "💞", "💗"][Math.floor(Math.random()*5)];
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.top="100vh";
+heart.style.fontSize=(20+Math.random()*25)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},4000);
+
+},150);
+
+}
+
+</script>
+
+</body>
+</html>
