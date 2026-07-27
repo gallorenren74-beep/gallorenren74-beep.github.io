@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Do You Love Me? 🥹</title>
+<title> Do You Love Me?</title>
+
 <style>
 *{
 margin:0;
@@ -17,7 +18,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 height:100vh;
-background:linear-gradient(135deg,#800080,#fff);
+background:linear-gradient(135deg,#8A9A5B,#fff);
 overflow:hidden;
 }
 
@@ -38,7 +39,7 @@ margin-bottom:20px;
 
 h1{
 margin-bottom:20px;
-color:#800080;
+color:#8A9A5B;
 }
 
 button{
@@ -51,13 +52,13 @@ transition:.2s;
 }
 
 #yes{
-background:#800080;
+background:#8A9A5B ;
 color:white;
 margin-right:20px;
 }
 
 #no{
-background:#0000FF;
+background:#ddd;
 position:absolute;
 }
 
@@ -107,10 +108,11 @@ transform:scale(1);
 
 <div id="question">
 
-<img src="https://c.tenor.com/sZPWbZj_QI8AAAAi/kakaotalk-emoticon.gif">
+<img src="Bear1.gif">
+
 <h1>Do You Love Me?🥹 </h1>
 
-<button id="yes">Yes 🥰 </button>
+<button id="yes">Yes💚 </button>
 
 <button id="no">No 😢</button>
 
@@ -118,13 +120,18 @@ transform:scale(1);
 
 <div id="success">
 
-<img src="Bear2.gif" width="200" alt="kissing bear">
+<img src="Kissbear.gif">
 
-<h1>yeyy, I Knew It! 😍</h1>
+<h1>I Knew It!🥹💚 </h1>
 
-<p style="margin-top:12px;font-size:12px;">
-Hi lovee, just a simple message for youu, I hope you know love that I will always be your biggest supporter and will be there for you anytime. You can lean on m every time you feel tired. I will always be your safe space when you feel like the world is against and weighs you down, I will always stay even if you feel like everyone is leaving you. whatever happens just remember that im always here and i will always be here, cause no matter how cruel the world is, you'll always have me, we'll always find a way to conquer the challenges that life throws.You will always be the best thing that ever happened to me.
-I lovee youu soo muchhh pooo!!😚 
+<p style="margin-top:15px;font-size:18px;">
+I Love you too, my love Sheena.💚 
+
+I just wanted to remind you how much you mean to me. No matter how busy or difficult the day gets, knowing you're in my life makes everything feel lighter. Thank you for loving me, supporting me, and making me smile even on my worst days.
+
+I hope today brings you happiness, peace, and plenty of reasons to smile. Always remember that I'm here for you, cheering you on every step of the way. I love you more than words can ever explain, and I'll keep choosing you every single day.
+
+Take care, beautiful. I can't wait to see you again. I love you so much.💖
 </p>
 
 </div>
@@ -154,7 +161,7 @@ document.getElementById("question").style.display="none";
 document.getElementById("success").style.display="block";
 
 const music = document.getElementById("music");
-music.currentTime = 80; // Starts at 1:20
+music.currentTime = 44; // Starts at 0:44
 music.play();
 
 setInterval(()=>{
@@ -163,7 +170,7 @@ let heart=document.createElement("div");
 
 heart.className="heart";
 
-heart.innerHTML=["💙", "💜", "💙", "💞", "💗"][Math.floor(Math.random()*5)];
+heart.innerHTML=["💚 ","💖","💚 ","💚", "💗" ,"💙 "][Math.floor(Math.random()*5)];
 
 heart.style.left=Math.random()*100+"vw";
 heart.style.top="100vh";
